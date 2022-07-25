@@ -13,10 +13,10 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 const { width } = Dimensions.get('screen');
 const cardWidth = width / 2 - 20;
 
-const Card = ({ food, navigation }) => {
+const Card = ({ food, navigation, onPress }) => {
      return (
           <TouchableHighlight
-               onPress={() => navigation.navigate('DetailsScreen', food)}
+               onPress={onPress}
                underlayColor={COLORS.white}
                activeOpacity={0.9}>
                <View style={styles.card}>

@@ -45,7 +45,15 @@ const HomeScreen = ({ navigation }) => {
                     showsVerticalScrollIndicator={false}
                     numColumns={2}
                     data={foods}
-                    renderItem={({ item }) => <Card food={item} />}
+                    renderItem={({ item }) => (
+                         <Card
+                              food={item}
+                              navigation={navigation}
+                              onPress={() =>
+                                   navigation.navigate('DetailsScreen', item)
+                              }
+                         />
+                    )}
                />
 
                {/*Flat list*/}
